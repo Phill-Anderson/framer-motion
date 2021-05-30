@@ -19,8 +19,9 @@ const Base = ({ addBase, pizza }) => {
 
     return (
         <motion.div className="base container"
-            initial={{ x: '100vw' }}
-            animate={{ x: 0 }}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
             transition={{ type: 'spring', delay: 0.5 }}
         >
 

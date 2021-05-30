@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import Button from './general/Button'
+import SlideLayout from './general/SlideLayout'
 const Toppings = ({ addTopping, pizza }) => {
     let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
 
     return (
-        <div className="toppings container">
-
+        <SlideLayout classes="toppings container" >
             <h3>Step 2: Choose Toppings</h3>
             <ul>
                 {toppings.map(topping => {
@@ -25,7 +25,7 @@ const Toppings = ({ addTopping, pizza }) => {
 
             <Button url="/order" text="Захиалах" />
 
-        </div>
+        </SlideLayout>
     )
 }
 
