@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion'
 import Button from './general/Button'
 import SlideLayout from './general/SlideLayout'
+import Loader from './general/Loader';
 const Home = () => {
     return (
         <SlideLayout classes="home container">
@@ -10,6 +11,7 @@ const Home = () => {
                 `Pizza Joint` - д тавтай морил!
             </motion.h2>
             <Button url="/base" text="Пицца захиалах!" />
+            <Loader />
         </SlideLayout>
     )
 }
