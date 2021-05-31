@@ -8,6 +8,17 @@ const containerVariants = {
     visible: {
         opacity: 1,
         x: 0
+    },
+    transition: {
+        type: 'spring',
+        mass: 0.4,
+        damping: 8,
+        when: 'beforeChildren',
+        staggerChildren: 0.4
+    },
+    exit: {
+        x: '-100vw',
+        transition: { ease: 'easeInOut' }
     }
 }
 const SlideLayout = ({ children, classes }) => {
@@ -16,7 +27,7 @@ const SlideLayout = ({ children, classes }) => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            transition={{ type: 'spring', delay: 0.5 }}
+            exit="exit"
         >
             {children}
         </motion.div>
