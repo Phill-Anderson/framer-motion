@@ -8,7 +8,7 @@ const Toppings = ({ addTopping, pizza }) => {
 
     return (
         <SlideLayout classes="toppings container" >
-            <h3>Step 2: Choose Toppings</h3>
+            <h3>Алхам 2: Хачираа сонгоно уу</h3>
             <ul>
                 {toppings.map(topping => {
                     let spanClass = pizza.toppings.includes(topping) ? 'active' : '';

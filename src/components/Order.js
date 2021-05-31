@@ -9,9 +9,15 @@ const childVariants = {
         opacity: 1
     }
 }
-const Order = ({ pizza }) => {
+const Order = ({ pizza, setShowModal }) => {
     const [showTitle, setShowTitle] = useState(true)
 
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setShowModal(true)
+        }, 5000)
+        return () => clearTimeout(timeout)
+    }, [setShowModal])
     useEffect(() => {
         const timeout = setTimeout(() => {
             setShowTitle(false)

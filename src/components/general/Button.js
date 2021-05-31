@@ -12,9 +12,9 @@ const buttonVariants = {
         }
     }
 }
-const Button = ({ url, text }) => {
+const Button = ({ url, text, onClick }) => {
     return (
-        <Link to={url}>
+        <Link to={url} onClick={onClick}>
             <motion.button variants={buttonVariants} whileHover="hover">
                 {text}
             </motion.button>

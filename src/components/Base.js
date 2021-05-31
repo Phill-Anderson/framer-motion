@@ -9,7 +9,7 @@ const Base = ({ addBase, pizza }) => {
     return (
         <SlideLayout classes="base container">
 
-            <h3>Step 1: Choose Your Base</h3>
+            <h3>Алхам 1: Төрлөө сонгоно уу</h3>
             <ul>
                 {bases.map(base => {
                     let spanClass = pizza.base === base ? 'active' : '';
